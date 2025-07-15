@@ -49,3 +49,15 @@ class Solution:
             return True 
 
         return False  
+
+"""
+The above check is complicated since we assume that the arrays could either be A B or B A
+
+But in this case, we already are sorted, hence any overlap means that the next array must come AFTER the current array 
+
+Hence for the check 
+
+1. prev[-1][1] <= int[0]
+
+2. Merge can be done inplace without pop() =>max(prev[-1][1], int[1])
+"""
